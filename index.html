@@ -1010,7 +1010,7 @@ async function uploadAndQR() {
   const dataUrl = finalCanvas.toDataURL('image/jpeg', 0.85);
 
   try {
-    const res = await fetch('/upload', {
+    const res = await fetch('/api/upload', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ image: dataUrl }),
